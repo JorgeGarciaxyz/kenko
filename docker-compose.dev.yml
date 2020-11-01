@@ -1,0 +1,15 @@
+version: '3'
+volumes:
+  dbdata:
+services:
+  postgres:
+    container_name: kenko_development
+    image: postgres:12.4
+    ports:
+      - '31127:5432'
+    environment:
+      - POSTGRES_USER=kenko
+      - POSTGRES_PASSWORD=kenko
+      - POSTGRES_DB=kenko_development
+    volumes:
+      - 'dbdata:/var/lib/postgresql/data'

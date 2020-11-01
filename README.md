@@ -1,24 +1,15 @@
-# README
+## Setup development database
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Run docker-compose
 
-Things you may want to cover:
+```
+docker-compose -f docker-compose.dev.yml up -d
+```
 
-* Ruby version
+Create test database
 
-* System dependencies
+```
+psql -h 127.0.0.1 -U kenko kenko_development -p 31127
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+CREATE DATABASE kenko_test;
+```
