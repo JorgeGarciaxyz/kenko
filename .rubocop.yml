@@ -7,7 +7,9 @@ AllCops:
     - 'node_modules/**/*'
   NewCops: enable
 
-require: rubocop-rails
+require:
+  - rubocop-rails
+  - rubocop-rspec
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
