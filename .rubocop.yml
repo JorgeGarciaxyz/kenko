@@ -19,3 +19,7 @@ Style/StringLiteralsInInterpolation:
 
 Style/Documentation:
   Enabled: false
+
+# rubocop rspec
+RSpec/NamedSubject:
+  Enabled: false
