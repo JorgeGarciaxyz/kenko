@@ -69,6 +69,9 @@ RSpec.configure do |config|
     DatabaseCleaner.clean_with(:truncation)
   end
 
+  # FactoryBot
+  config.include FactoryBot::Syntax::Methods
+
   # rubocop:disable RSpec/HookArgument
   config.around(:each) do |example|
     DatabaseCleaner.cleaning do
