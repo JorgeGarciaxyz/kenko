@@ -79,6 +79,8 @@ RSpec.configure do |config|
     end
   end
   # rubocop:enable RSpec/HookArgument
+
+  config.include Devise::Test::IntegrationHelpers, type: :request
 end
 
 Shoulda::Matchers.configure do |config|
