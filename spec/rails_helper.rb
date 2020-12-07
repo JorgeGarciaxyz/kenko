@@ -69,6 +69,9 @@ RSpec.configure do |config|
     DatabaseCleaner.clean_with(:truncation)
   end
 
+  # FactoryBot
+  config.include FactoryBot::Syntax::Methods
+
   # rubocop:disable RSpec/HookArgument
   config.around(:each) do |example|
     DatabaseCleaner.cleaning do
@@ -76,6 +79,8 @@ RSpec.configure do |config|
     end
   end
   # rubocop:enable RSpec/HookArgument
+
+  config.include Devise::Test::IntegrationHelpers, type: :request
 end
 
 Shoulda::Matchers.configure do |config|
