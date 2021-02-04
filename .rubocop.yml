@@ -5,6 +5,7 @@ AllCops:
     - 'db/migrate/*'
     - 'config/**/*'
     - 'node_modules/**/*'
+    - 'config.ru'
   NewCops: enable
 
 require:
