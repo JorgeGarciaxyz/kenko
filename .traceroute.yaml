@@ -1,0 +1,6 @@
+ignore_unreachable_actions:
+  - ^devise
+  - ^rails/conductor/action_mailbox
+ignore_unused_routes:
+  - ^devise
+  - ^rails/conductor/action_mailbox
