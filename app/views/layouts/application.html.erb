@@ -11,6 +11,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="p-6">
+      <div class="flex justify-between mb-4">
+        <span>Kenko</span>
+        <span><%= current_user.email %></span>
+      </div>
+
+      <%= yield %>
+    </div>
   </body>
 </html>
