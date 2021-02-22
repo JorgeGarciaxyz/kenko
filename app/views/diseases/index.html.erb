@@ -1,0 +1,9 @@
+<h1>Hello diseases</h1>
+
+<%= turbo_frame_tag "diseases_index" do %>
+  <div>
+    <% @diseases.each do |disease| %>
+      <span><%= disease.name %></span>
+    <% end %>
+  </div>
+ <% end %>
