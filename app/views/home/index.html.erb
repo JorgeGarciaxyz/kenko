@@ -1,7 +1,13 @@
-<h1>Welcome to Kenko</h1>
+<div class="flex">
+  <div class="w-1/3">
+    <button>+ Disease</button>
+  </div>
 
-<h3>Your diseases</h3>
+  <div class="w-1/3 flex justify-center">
+    <h3>Diseases</h3>
+  </div>
+</div>
 
-<div>
+<div class="mt-4">
   <%= turbo_frame_tag "diseases_index", src: diseases_path, target: "_top" %>
 </div>
