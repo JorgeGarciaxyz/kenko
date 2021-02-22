@@ -1,2 +1,7 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Welcome to Kenko</h1>
+
+<h3>Your diseases</h3>
+
+<div>
+  <%= turbo_frame_tag "diseases_index", src: diseases_path, target: "_top" %>
+</div>
