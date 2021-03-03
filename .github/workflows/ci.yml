@@ -44,4 +44,4 @@ jobs:
           bundle exec rubocop
           bundle exec brakeman
           bundle exec rails db:prepare
-          bundle exec rails test
+          bundle exec rails test:all
