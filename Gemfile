@@ -37,10 +37,8 @@ gem "stimulus-rails"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: %i[mri mingw x64_mingw]
-  gem "factory_bot_rails", "~> 6"
   gem "minitest-rails", "~> 6.1.0"
   gem "pry-rails"
-  gem "rspec-rails", "~> 4.0.1"
 end
 
 group :development do
@@ -58,10 +56,7 @@ end
 
 group :test do
   gem "capybara"
-  gem "database_cleaner-active_record", "~> 1.8"
-  gem "faker", "~> 2"
   gem "selenium-webdriver"
-  gem "shoulda-matchers", "~> 4.4"
   gem "simplecov", require: false
   gem "webdrivers"
 end
