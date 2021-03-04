@@ -12,15 +12,14 @@ require:
   - rubocop-rails
   - rubocop-rspec
 
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 
 Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes
-
-Style/Documentation:
-  Enabled: false
-
-# rubocop rspec
-RSpec/NamedSubject:
-  Enabled: false
