@@ -1,7 +1,14 @@
+# frozen_string_literal: true
+
 require "test_helper"
 
-describe Disease do
-  # it "does a thing" do
-  #   value(1+1).must_equal 2
-  # end
+class DiseaseTest < ActiveSupport::TestCase
+  context "associations" do
+    should belong_to(:user)
+  end
+
+  context "validations" do
+    should validate_presence_of(:name)
+    should validate_presence_of(:user)
+  end
 end
