@@ -1,0 +1,5 @@
+migraine:
+  name: "migraine"
+  start_date: "2015-08-08"
+  symptoms: "Pain on left side of the head, sensitive to light"
+  user: base
