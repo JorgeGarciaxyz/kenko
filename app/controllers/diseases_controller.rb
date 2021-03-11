@@ -9,5 +9,23 @@ class DiseasesController < ApplicationController
     @diseases = current_user.diseases
   end
 
-  def create; end
+  def create
+    disease = Disease.new(disease_params)
+
+    if disease.save
+      redirect_to edit_disease_path(disease.id)
+    else
+      raise
+    end
+  end
+
+  def edit
+    @disease = Disease.find_by!(user: current_user, id: params[:id])
+  end
+
+  private
+
+  def disease_params
+    params.require(:disease).permit(:name).merge(user: current_user)
+  end
 end

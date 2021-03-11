@@ -7,5 +7,5 @@ Rails.application.routes.draw do
 
   get "home/index"
 
-  resources :diseases, only: [:index, :new, :create]
+  resources :diseases, only: [:index, :new, :create, :edit]
 end
