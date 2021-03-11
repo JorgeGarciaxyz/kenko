@@ -1,3 +1,16 @@
-<%= form_for @disease, url: { action: "create" } do |f| %>
-  <%= f.text_field :name %>
+<%= turbo_frame_tag "new_disease" do %>
+  <div>
+    <h1>New Disease</h1>
+
+    <%= form_with model: @disease do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name, required: true %>
+
+      <%= f.submit "Save", { class: "focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-gray-700 hover:bg-gray-900 hover:shadow-lg" } %>
+
+      <%= render(Basic::ButtonComponent.new(color: :red)) do %>
+        <%= link_to "Cancel", root_path %>
+      <% end %>
+    <% end %>
+  </div>
 <% end %>
