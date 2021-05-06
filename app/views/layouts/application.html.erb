@@ -8,9 +8,19 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag "application", "data-turbo-track": "reload" %>
+    <%= turbo_include_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="p-6">
+      <div class="flex justify-between mb-4">
+        <span><%= link_to "Kenko", root_path %></span>
+        <span><%= current_user.email %></span>
+      </div>
+
+      <div class="w-4/5 m-auto">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

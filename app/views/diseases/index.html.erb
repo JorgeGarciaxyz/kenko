@@ -1,0 +1,13 @@
+<h1>Your diseases</h1>
+
+<%= turbo_frame_tag "diseases_index" do %>
+  <div class="flex flex-wrap">
+    <% @diseases.each do |disease| %>
+      <div class="w-2/6 mb-4 flex justify-center">
+        <div class="w-3/6 flex justify-center border-2 border-gray-400 rounded">
+          <span><%= disease.name %></span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+ <% end %>
